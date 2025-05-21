@@ -1,3 +1,3 @@
 # Machine learning algorithms 
 
-# aim is to have understation of algorithm and how they works
+# Aim is to have understanding of algorithm and how they work.
