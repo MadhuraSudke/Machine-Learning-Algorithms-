@@ -1,0 +1,127 @@
+# Simple Linear Regression From Scratch
+
+This project implements **Simple Linear Regression from scratch using Python**, without using any machine learning libraries such as scikit-learn.
+
+The goal is to understand:
+- how linear regression works internally
+- how gradient descent updates parameters
+- why normalization is important
+- the intuition behind fitting a straight line to data
+
+---
+
+## 📌 Problem Statement
+
+We use a **Salary Prediction dataset** where:
+- **Input (X)**: Years of Experience  
+- **Output (Y)**: Salary  
+
+The objective is to learn a linear relationship:
+
+Y = wX + b
+
+where:
+- `w` is the weight (slope)
+- `b` is the bias (intercept)
+
+---
+
+## 📊 Dataset
+
+The dataset contains two columns:
+- `YearsExperience`
+- `Salary`
+
+This dataset shows a clear **positive linear relationship**, making it ideal for understanding simple linear regression.
+
+---
+
+## 🧠 Intuition Behind Linear Regression
+
+Linear regression tries to find the **best-fit straight line** that minimizes the error between:
+- actual values (Y)
+- predicted values (ŷ)
+
+The model starts with random values for `w` and `b`, then gradually improves them using **Gradient Descent**.
+
+---
+
+## 📐 Cost Function (Mean Squared Error)
+
+We use the Mean Squared Error (MSE):
+
+J(w, b) = (1 / 2n) Σ (ŷ − y)²
+
+This function measures how bad the predictions are.
+Gradient descent minimizes this cost.
+
+---
+
+## 🔁 Gradient Descent
+
+Gradients tell us **how to change parameters** to reduce the loss.
+
+∂J/∂w = (1 / n) Σ (ŷ − y) x  
+∂J/∂b = (1 / n) Σ (ŷ − y)
+
+Update rules:
+
+w = w − α ∂J/∂w  
+b = b − α ∂J/∂b  
+
+where α is the learning rate.
+
+---
+
+## 📏 Normalization (From Scratch)
+
+To improve convergence, the input feature is normalized using **Z-score normalization**:
+
+X_norm = (X − μ) / σ
+
+Normalization:
+- centers data around 0
+- improves gradient descent stability
+- speeds up convergence
+
+---
+
+## 📈 Results
+
+- The loss decreases smoothly over iterations
+- The learned regression line fits the data well
+- The slope correctly captures the positive relationship between experience and salary
+
+---
+
+## 🛠 Technologies Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+
+---
+
+## 🚀 What This Project Demonstrates
+
+✔ Linear Regression from scratch  
+✔ Gradient Descent implementation  
+✔ Feature normalization  
+✔ Loss visualization  
+✔ Model intuition  
+
+---
+
+## 📌 Future Improvements
+
+- Train/Test split
+- R² score calculation
+- Multivariate Linear Regression
+- Optimizers like Momentum or Adam
+
+---
+
+## ✨ Author
+
+Built for learning and understanding Machine Learning fundamentals.
